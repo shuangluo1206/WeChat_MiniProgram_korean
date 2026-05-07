@@ -1,0 +1,165 @@
+/* pages/stats/stats.wxss（粉白配色）*/
+
+.stats-container {
+  padding: 40rpx;
+  background: #FFF9FA;
+  min-height: 100vh;
+}
+
+/* 顶部卡片 */
+.header-card {
+  background: linear-gradient(135deg, #F5A3B5 0%, #D67889 100%);
+  border-radius: 32rpx;
+  padding: 60rpx 40rpx;
+  margin-bottom: 40rpx;
+  color: #FFFFFF;
+}
+
+.avatar-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60rpx;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  background: #FFFFFF;
+  margin-right: 30rpx;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+
+.level {
+  font-size: 24rpx;
+  opacity: 0.9;
+}
+
+/* 主要统计 */
+.main-stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stat-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-size: 56rpx;
+  font-weight: 700;
+  margin-bottom: 10rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  opacity: 0.9;
+}
+
+/* 卡片区域 */
+.section-card {
+  background: #FFFFFF;
+  border-radius: 32rpx;
+  padding: 40rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 4rpx 20rpx rgba(245, 163, 181, 0.15);
+}
+
+.section-header {
+  margin-bottom: 40rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #2C2C2C;
+}
+
+/* 进度条 */
+.progress-item {
+  margin-bottom: 40rpx;
+}
+
+.progress-item:last-child {
+  margin-bottom: 0;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  color: #2C2C2C;
+}
+
+.progress-percent {
+  color: #F5A3B5;
+  font-weight: 600;
+}
+
+/* 本周统计 */
+.week-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40rpx;
+}
+
+.week-stat-item {
+  text-align: center;
+}
+
+.week-stat-value {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #F5A3B5;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.week-stat-label {
+  font-size: 24rpx;
+  color: #6B7280;
+}
+
+/* 设置项 */
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30rpx 0;
+  border-bottom: 1rpx solid #FFF0F3;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-label {
+  font-size: 28rpx;
+  color: #2C2C2C;
+}
+
+.setting-value {
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #6B7280;
+}
+
+.arrow {
+  font-size: 36rpx;
+  color: #6B7280;
+  margin-left: 10rpx;
+}

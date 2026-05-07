@@ -1,0 +1,64 @@
+<!--pages/calendar/calendar.wxml-->
+<view class="calendar-container">
+  <!-- 打卡统计卡片 -->
+  <view class="stats-card">
+    <view class="fire-badge">
+      <text class="fire-icon">🔥</text>
+      <text class="fire-text">已坚持 {{continuousDays}} 天</text>
+    </view>
+    <view class="progress-ring">
+      <text class="progress-text">{{todayProgress}}%</text>
+      <text class="progress-label">今日完成度</text>
+    </view>
+  </view>
+
+  <!-- 日历 -->
+  <view class="calendar-card">
+    <view class="calendar-header">
+      <button class="btn-month" bindtap="prevMonth">
+        <text>◀</text>
+      </button>
+      <text class="month-text">{{currentYear}}年{{currentMonth}}月</text>
+      <button class="btn-month" bindtap="nextMonth">
+        <text>▶</text>
+      </button>
+    </view>
+
+    <view class="calendar-weekdays">
+      <text class="weekday">日</text>
+      <text class="weekday">一</text>
+      <text class="weekday">二</text>
+      <text class="weekday">三</text>
+      <text class="weekday">四</text>
+      <text class="weekday">五</text>
+      <text class="weekday">六</text>
+    </view>
+
+    <view class="calendar-days">
+      <view
+        class="day-item {{item.isChecked ? 'checked' : ''}} {{item.isToday ? 'today' : ''}}"
+        wx:for="{{calendarDays}}"
+        wx:key="date"
+      >
+        <text class="day-number">{{item.day}}</text>
+        <view class="check-mark" wx:if="{{item.isChecked}}">✓</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 本月统计 -->
+  <view class="month-stats">
+    <view class="stat-item">
+      <text class="stat-value">{{monthCheckInDays}}</text>
+      <text class="stat-label">本月打卡</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-value">{{monthNewWords}}</text>
+      <text class="stat-label">本月新学</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-value">{{monthReviewCount}}</text>
+      <text class="stat-label">本月复习</text>
+    </view>
+  </view>
+</view>

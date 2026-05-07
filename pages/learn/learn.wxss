@@ -1,0 +1,298 @@
+/* pages/learn/learn.wxss（粉白配色）*/
+
+.learn-container {
+  min-height: 100vh;
+  background: #FFF9FA;
+  padding: 0;
+}
+
+/* 顶部进度条 */
+.header {
+  background: #FFFFFF;
+  padding: 30rpx 40rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.progress-text {
+  font-size: 28rpx;
+  color: #D67889;
+  font-weight: 600;
+}
+
+.btn-pause {
+  background: #FFF0F3;
+  color: #F5A3B5;
+  padding: 10rpx 30rpx;
+  border-radius: 40rpx;
+  font-size: 24rpx;
+  border: none;
+}
+
+/* 学习卡片 */
+.word-card {
+  margin: 60rpx 40rpx;
+  background: #FFFFFF;
+  border-radius: 32rpx;
+  padding: 60rpx 40rpx;
+  box-shadow: 0 8rpx 32rpx rgba(245, 163, 181, 0.2);
+}
+
+/* 图片容器 */
+.image-container {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.word-image {
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 24rpx;
+}
+
+/* 单词信息 */
+.word-info {
+  text-align: center;
+  margin-bottom: 80rpx;
+}
+
+.korean-word {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+}
+
+.korean-text {
+  font-size: 64rpx;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-right: 20rpx;
+}
+
+.audio-btn {
+  width: 60rpx;
+  height: 60rpx;
+  background: #FFF0F3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-icon {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.pronunciation {
+  font-size: 28rpx;
+  color: #6B7280;
+  display: block;
+  margin-bottom: 30rpx;
+}
+
+.word-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rpx;
+}
+
+.type-tag {
+  background: #FFF0F3;
+  color: #F5A3B5;
+  padding: 8rpx 24rpx;
+  border-radius: 24rpx;
+  font-size: 24rpx;
+}
+
+.chinese-text {
+  font-size: 36rpx;
+  color: #2C2C2C;
+  font-weight: 500;
+}
+
+/* 词源信息样式 */
+.etymology-info {
+  margin-top: 20rpx;
+  padding: 16rpx 20rpx;
+  background: linear-gradient(135deg, #FFF9FA 0%, #FFF0F3 100%);
+  border-radius: 12rpx;
+  border-left: 4rpx solid #F5A3B5;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8rpx;
+}
+
+.etymology-label {
+  font-size: 24rpx;
+  color: #D67889;
+  font-weight: 600;
+}
+
+.etymology-text {
+  font-size: 28rpx;
+  color: #1F2937;
+  font-weight: 700;
+  font-family: serif;
+}
+
+.source-lang {
+  font-size: 22rpx;
+  color: #9CA3AF;
+  font-style: italic;
+}
+
+/* 难度标签 */
+.level-tag {
+  margin-top: 16rpx;
+  display: inline-block;
+}
+
+.level-text {
+  padding: 6rpx 16rpx;
+  background: linear-gradient(135deg, #F5A3B5 0%, #D67889 100%);
+  color: white;
+  font-size: 22rpx;
+  border-radius: 20rpx;
+  font-weight: 600;
+  letter-spacing: 1rpx;
+}
+
+/* 例句区域 */
+.examples-section {
+  margin-top: 24rpx;
+  padding: 24rpx;
+  background: white;
+  border-radius: 16rpx;
+  border: 2rpx solid #FFF0F3;
+}
+
+.examples-title {
+  display: block;
+  font-size: 26rpx;
+  color: #D67889;
+  font-weight: 600;
+  margin-bottom: 16rpx;
+}
+
+.example-item {
+  margin-bottom: 16rpx;
+  padding-bottom: 16rpx;
+  border-bottom: 1rpx solid #FFF9FA;
+}
+
+.example-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.example-korean {
+  display: block;
+  font-size: 26rpx;
+  color: #1F2937;
+  line-height: 1.6;
+  margin-bottom: 8rpx;
+}
+
+.example-chinese {
+  display: block;
+  font-size: 24rpx;
+  color: #9CA3AF;
+  line-height: 1.5;
+}
+
+/* 操作按钮 */
+.action-buttons {
+  display: flex;
+  gap: 30rpx;
+}
+
+.btn-action {
+  flex: 1;
+  padding: 36rpx 0;
+  border-radius: 48rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.1);
+}
+
+.btn-unknown {
+  background: #FFF9FA;
+  color: #6B7280;
+}
+
+.btn-know {
+  background: linear-gradient(135deg, #FF6B9D 0%, #C9184A 100%);
+  color: #FFFFFF;
+}
+
+.btn-action:active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+/* 完成页面 */
+.complete-page {
+  text-align: center;
+  padding: 200rpx 60rpx;
+}
+
+.complete-icon {
+  font-size: 120rpx;
+  margin-bottom: 40rpx;
+}
+
+.complete-title {
+  font-size: 48rpx;
+  font-weight: 600;
+  color: #2C2C2C;
+  display: block;
+  margin-bottom: 60rpx;
+}
+
+.complete-stats {
+  display: flex;
+  justify-content: space-around;
+  background: #FFFFFF;
+  border-radius: 24rpx;
+  padding: 60rpx 40rpx;
+  margin-bottom: 60rpx;
+  box-shadow: 0 4rpx 20rpx rgba(245, 163, 181, 0.15);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 56rpx;
+  font-weight: 700;
+  color: #F5A3B5;
+  margin-bottom: 10rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #6B7280;
+}
+
+/* 加载状态 */
+.loading {
+  text-align: center;
+  padding: 300rpx 0;
+  color: #6B7280;
+  font-size: 28rpx;
+}

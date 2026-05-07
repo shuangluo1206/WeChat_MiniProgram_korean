@@ -1,0 +1,77 @@
+HanCard-MVP/
+│
+├── 📱 小程序核心
+│   ├── app.js                    # 入口文件
+│   ├── app.json                  # 全局配置
+│   ├── app.wxss                  # 全局样式
+│   └── project.config.json       # 项目配置
+│
+├── 📄 页面 (pages/)
+│   ├── learn/                    # 学习页面 ⭐核心⭐
+│   │   ├── learn.js              # 逻辑（单词展示、语音、答题）
+│   │   ├── learn.wxml            # 结构（词源、例句显示）
+│   │   ├── learn.wxss            # 样式（粉白配色）
+│   │   └── learn.json
+│   │
+│   ├── import/                   # 管理页面（导入词汇）
+│   │   ├── import.js
+│   │   ├── import.wxml
+│   │   ├── import.wxss
+│   │   └── import.json
+│   │
+│   ├── calendar/                 # 打卡日历（待完善）
+│   └── stats/                    # 统计页面（待完善）
+│
+├── ☁️ 云函数 (cloudfunctions/)
+│   ├── importWords/              # 批量导入词汇
+│   │   ├── index.js              # 智能去重逻辑
+│   │   └── package.json
+│   │
+│   └── login/                    # 用户登录
+│       ├── index.js              # 获取openid
+│       └── package.json
+│
+├── 🛠️ 工具函数 (utils/)
+│   └── memory.js                 # 艾宾浩斯记忆算法
+│
+└── 📦 开发脚本 (scripts/)
+    ├── vocab_generator.py        # 词汇生成器 ⭐
+    ├── vocab_converter.py        # 格式转换
+    ├── batch_import.py           # 批量导入（可选）
+    ├── korean_vocab_full.json    # 完整词库（151词）⭐
+    └── README.md                 # 词库说明
+
+---
+
+关键文件说明：
+
+⭐ pages/learn/                 学习页面 - 核心功能
+⭐ cloudfunctions/importWords/  智能导入 - 自动去重
+⭐ scripts/korean_vocab_full.json  完整词库 - 151词+168例句
+⭐ scripts/vocab_generator.py   词汇生成器 - 扩展词库
+
+---
+
+已删除的冗余文件：
+
+❌ korean_vocab_200.json           # 中间版本
+❌ korean_vocab_professional.json  # 中间版本
+❌ korean_vocab_with_examples.json # 中间版本
+❌ korean_vocab_complete.json      # 中间版本
+❌ words_import.json                # 临时文件
+❌ sample_vocab.txt                 # 示例文件
+❌ vocab_generator.py（旧）        # 旧版本
+❌ vocab_with_examples_generator.py # 旧版本
+❌ cloudfunctions/generateAudio/    # 未使用（已用Google TTS替代）
+❌ utils/korean-tts.js              # 未使用
+
+---
+
+优化结果：
+
+✅ 文件数量: 从 20+ 减少到 12 个核心文件
+✅ scripts目录: 从 12 个文件精简到 5 个
+✅ 云函数: 从 3 个减少到 2 个
+✅ 命名规范: 统一为英文清晰命名
+✅ 文档完善: 新增 PROJECT_STRUCTURE.md
+

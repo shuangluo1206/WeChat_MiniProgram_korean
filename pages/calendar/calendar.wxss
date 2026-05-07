@@ -1,0 +1,169 @@
+/* pages/calendar/calendar.wxss（粉白配色）*/
+
+.calendar-container {
+  padding: 40rpx;
+  background: #FFF9FA;
+  min-height: 100vh;
+}
+
+/* 统计卡片 */
+.stats-card {
+  background: linear-gradient(135deg, #F5A3B5 0%, #D67889 100%);
+  border-radius: 32rpx;
+  padding: 60rpx 40rpx;
+  margin-bottom: 40rpx;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fire-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fire-icon {
+  font-size: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.fire-text {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.progress-ring {
+  text-align: center;
+}
+
+.progress-text {
+  font-size: 64rpx;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.progress-label {
+  font-size: 24rpx;
+  opacity: 0.9;
+}
+
+/* 日历卡片 */
+.calendar-card {
+  background: #FFFFFF;
+  border-radius: 32rpx;
+  padding: 40rpx;
+  margin-bottom: 40rpx;
+  box-shadow: 0 4rpx 20rpx rgba(245, 163, 181, 0.15);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.btn-month {
+  background: #FFF0F3;
+  color: #F5A3B5;
+  width: 80rpx;
+  height: 60rpx;
+  border-radius: 16rpx;
+  font-size: 28rpx;
+  border: none;
+  padding: 0;
+}
+
+.month-text {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #2C2C2C;
+}
+
+/* 星期标题 */
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.weekday {
+  text-align: center;
+  font-size: 24rpx;
+  color: #6B7280;
+  padding: 10rpx 0;
+}
+
+/* 日期网格 */
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10rpx;
+}
+
+.day-item {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16rpx;
+  position: relative;
+}
+
+.day-number {
+  font-size: 28rpx;
+  color: #2C2C2C;
+}
+
+.day-item.checked {
+  background: #FFF0F3;
+}
+
+.day-item.checked .day-number {
+  color: #F5A3B5;
+  font-weight: 600;
+}
+
+.day-item.today {
+  border: 2rpx solid #F5A3B5;
+}
+
+.check-mark {
+  position: absolute;
+  bottom: 8rpx;
+  font-size: 20rpx;
+  color: #F5A3B5;
+}
+
+/* 本月统计 */
+.month-stats {
+  background: #FFFFFF;
+  border-radius: 32rpx;
+  padding: 60rpx 40rpx;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 4rpx 20rpx rgba(245, 163, 181, 0.15);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 56rpx;
+  font-weight: 700;
+  color: #F5A3B5;
+  margin-bottom: 10rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #6B7280;
+}

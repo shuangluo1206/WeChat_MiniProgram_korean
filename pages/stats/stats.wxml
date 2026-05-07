@@ -1,0 +1,104 @@
+<!--pages/stats/stats.wxml-->
+<view class="stats-container">
+  <!-- 顶部卡片 -->
+  <view class="header-card">
+    <view class="avatar-section">
+      <image class="avatar" src="/images/avatar_default.png"></image>
+      <view class="user-info">
+        <text class="nickname">韩语学习者</text>
+        <text class="level">初级</text>
+      </view>
+    </view>
+
+    <view class="main-stats">
+      <view class="stat-large">
+        <text class="stat-number">{{learnedWords}}</text>
+        <text class="stat-label">已学单词</text>
+      </view>
+      <view class="stat-large">
+        <text class="stat-number">{{masteredWords}}</text>
+        <text class="stat-label">已掌握</text>
+      </view>
+      <view class="stat-large">
+        <text class="stat-number">{{continuousDays}}</text>
+        <text class="stat-label">连续天数</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 学习进度 -->
+  <view class="section-card">
+    <view class="section-header">
+      <text class="section-title">学习进度</text>
+    </view>
+
+    <view class="progress-item">
+      <view class="progress-info">
+        <text>词汇掌握度</text>
+        <text class="progress-percent">{{masteryPercent}}%</text>
+      </view>
+      <view class="progress-bar">
+        <view class="progress-fill" style="width: {{masteryPercent}}%"></view>
+      </view>
+    </view>
+
+    <view class="progress-item">
+      <view class="progress-info">
+        <text>当前词书</text>
+        <text class="progress-percent">{{bookProgress}}%</text>
+      </view>
+      <view class="progress-bar">
+        <view class="progress-fill" style="width: {{bookProgress}}%"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 本周统计 -->
+  <view class="section-card">
+    <view class="section-header">
+      <text class="section-title">本周统计</text>
+    </view>
+
+    <view class="week-stats">
+      <view class="week-stat-item">
+        <text class="week-stat-value">{{weekNewWords}}</text>
+        <text class="week-stat-label">新学</text>
+      </view>
+      <view class="week-stat-item">
+        <text class="week-stat-value">{{weekReviewCount}}</text>
+        <text class="week-stat-label">复习</text>
+      </view>
+      <view class="week-stat-item">
+        <text class="week-stat-value">{{weekTotalTime}}</text>
+        <text class="week-stat-label">学习时长</text>
+      </view>
+      <view class="week-stat-item">
+        <text class="week-stat-value">{{weekCompletionRate}}%</text>
+        <text class="week-stat-label">完成率</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 设置 -->
+  <view class="section-card">
+    <view class="section-header">
+      <text class="section-title">学习设置</text>
+    </view>
+
+    <view class="setting-item" bindtap="setDailyGoal">
+      <text class="setting-label">每日学习目标</text>
+      <view class="setting-value">
+        <text>{{dailyGoal}} 词</text>
+        <text class="arrow">›</text>
+      </view>
+    </view>
+
+    <view class="setting-item" bindtap="changeWordBook">
+      <text class="setting-label">当前词书</text>
+      <view class="setting-value">
+        <text>TOPIK初级必备</text>
+        <text class="arrow">›</text>
+      </view>
+    </view>
+  </view>
+</view>
